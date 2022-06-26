@@ -1,0 +1,24 @@
+<main>
+    <div class="container">
+        <h2>Check rates</h2>
+        <div class="row">
+            <div class="amount">
+                <input type="number" min="1" class="form-control input-value" [formControl]="inputValue" (change)="convert()"/>
+                <select name="input-currency" id="input-currency" class="form-select" [formControl]="inputCurrency" (change)="convert()">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="uah">UAH</option>
+                </select>
+            </div>
+
+            <div class="amount">
+                <input type="number" min="1" class="form-control output-value" [formControl]="outputValue" (change)="convert(true)"/>
+                <select name="output-currency" id="output-currency" class="form-select" [formControl]="outputCurrency" (change)="convert()">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="uah">UAH</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</main>

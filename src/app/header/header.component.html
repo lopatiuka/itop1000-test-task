@@ -1,0 +1,14 @@
+<header>
+    <div class="container">
+        <p>Current UAH rates</p>
+        <div class="row">
+            <div class="wrapper">
+                <div *ngFor="let rate of rates" class="rates">
+                    <div *ngIf="rate.ccy !== 'BTC'">
+                        <span class="currency">{{rate.ccy}}</span>: <span class="value">{{rate.buy}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
