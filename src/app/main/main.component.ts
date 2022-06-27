@@ -37,19 +37,11 @@ export class MainComponent {
         reverse ? this.rateService.getRate(this.outputCurrency.value, this.inputCurrency.value)
         .subscribe(rate => { 
             this.rate = rate 
-            debugger
             this.getResult(this.rate, reverse);
         }) : this.rateService.getRate(this.inputCurrency.value, this.outputCurrency.value)
         .subscribe(rate => { this.rate = rate 
             this.getResult(this.rate, reverse);
         });
-    }
-
-    checkInput (value: string): boolean {
-        if( value === "0" )
-        return true;
-
-        return false
     }
 
     ngOnInit() {
